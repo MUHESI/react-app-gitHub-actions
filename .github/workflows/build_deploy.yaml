@@ -1,5 +1,5 @@
 
-name: gitHub actions test
+name: gitHub actions deploy
 on: 
   pull_request:
     types:
