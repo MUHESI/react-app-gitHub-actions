@@ -1,4 +1,4 @@
-name: Test React App updated
+name: gitHub actions test
 on: 
   pull_request:
     types:
