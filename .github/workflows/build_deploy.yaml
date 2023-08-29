@@ -1,3 +1,4 @@
+
 name: gitHub actions test
 on: 
   pull_request:
@@ -22,5 +23,13 @@ jobs:
           node-version: 18
       - name: Install
         run: npm install
-      - name: Test 
-        run: npm run test
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        uses: MUHESI/react-app-gitHub-actions
+        with:
+          folder: build
+          branch: gh-pages
+        env:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        
