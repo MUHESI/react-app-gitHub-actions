@@ -1,5 +1,16 @@
-name: Test React App
-on: workflow_dispatch
+name: Test React App updated
+on: 
+  pull_request:
+    types:
+      - opened
+  workflow_dispatch
+  push:
+    branches:
+      - main
+      - hotflix-*
+      - feat/**
+    paths-ignore:
+      - .github/workflows/*
 jobs:
   test:
     runs-on: ubuntu-latest
