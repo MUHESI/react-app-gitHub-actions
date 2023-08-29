@@ -3,14 +3,13 @@ on:
   pull_request:
     types:
       - opened
-  workflow_dispatch
+  workflow_dispatch:
   push:
     branches:
       - main
-      - hotflix-*
-      - feat/**
+      - develop
     paths-ignore:
-      - .github/workflows/*
+      - '.github/workflows/*'
 jobs:
   test:
     runs-on: ubuntu-latest
